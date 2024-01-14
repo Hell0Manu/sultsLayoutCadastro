@@ -1,3 +1,36 @@
+/* evento dentro do formulario */
+const form = document.querySelector("form");
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    checkInputEmail()
+})
+
+/* name validate */
+
+
+/* Email validate */
+const email = document.getElementById("email");
+
+function checkInputEmail(){
+    const emailValue = email.value;
+
+    if(emailValue === "") {
+        errorInput(email, "Please enter a valid email address.")
+    } else{
+        const formItem = email.parentElement;
+        formItem.className = "form-group"
+    }
+}
+
+function errorInput(input, message){
+    const formItem = input.parentElement;
+    const textMessage = formItem.querySelector("a")
+
+    textMessage.innerText = message;
+    formItem.className = "form-group error"
+}
+
+
 /* Phone mask */
 let phone = document.getElementById("phone");
 

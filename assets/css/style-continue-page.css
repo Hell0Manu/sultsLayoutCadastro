@@ -1,8 +1,7 @@
 *{
     font-family: sans-serif;
     padding: 0;
-    margin: 0;
-    
+    margin: 0;   
 }
 
 .initial-container{
@@ -41,13 +40,14 @@
 }
 
 .card-verificad {
-    max-width: 215px;
-    height: 300px;
+    max-width: 414px;
+    height: 400px;
     background: #e7f0f6;
     overflow: hidden;
     border-radius: 20px;
  box-shadow: 0 0 2px 0 rgb(34 47 62/20%), 0 4px 8px 0 rgb(34 47 62/15%); 
     border: 1px solid #d5d5d5;
+    margin-left: 50px;
 }
 
 .verification-container {
