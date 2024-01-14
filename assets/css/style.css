@@ -1,9 +1,13 @@
 /* General styles*/
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     line-height: 1.5;
+}
+
+body {
+    background: #00acac;
 }
 
 main {
@@ -11,7 +15,6 @@ main {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #00acac;
 }
 
 /* Left side - Forms */
@@ -44,7 +47,7 @@ form {
 }
 
 .form-group {
-    width: 357.500px;
+    max-width: 357.500px;
     height: 62px;
     margin-bottom: 1rem;
     position: relative;
@@ -58,7 +61,7 @@ form {
     box-sizing: border-box;
     border-radius: 0.25rem;
     outline: none;
-    font-size: 1rem;  
+    font-size: 1rem;
 }
 
 .form-group label {
@@ -68,11 +71,11 @@ form {
 
 .form-group input:focus {
     box-shadow: 0px 0px 0px 3px #B6D6F2;
-    border: 1px solid #7EBCF2; 
+    border: 1px solid #7EBCF2;
 }
 
 .form-group input::placeholder {
-    color: #c3c8cb; 
+    color: #c3c8cb;
     font-size: 14px;
 }
 
@@ -81,12 +84,13 @@ form {
 }
 
 .title {
-    color: #202c3a; 
+    color: #202c3a;
     font-size: 22px;
     height: 29.33px;
     margin: 16px 0;
     line-height: 1.3333;
 }
+
 .continue-button {
     display: flex;
     justify-content: flex-end;
@@ -146,22 +150,24 @@ form {
 }
 
 .img-nome {
-    width:105px;
+    width: 105px;
     height: 27.64px;
     margin-top: 25px;
 }
 
-.logos h1{
+.logos h1 {
     line-height: 1.2;
     margin-bottom: 0.5rem;
 }
 
 /* Bottom side - privacty and terms*/
 .politics-term-div {
+    display: flex; background: none; box-shadow: none; align-items: flex-end;
     margin: 1rem 0;
     display: flex;
     justify-content: flex-end
 }
+
 
 .politics-term-div a {
     text-decoration: none;
@@ -173,3 +179,50 @@ form {
     margin-left: 20px;
 }
 
+/* Responsive screen */
+@media only screen and (max-width: 1024px) {
+    .right-logo-div {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .general-container {
+        width: 750px;
+    }
+
+    .principal-container {
+        grid-template-columns: 1fr;
+        width: 100%;
+        height: auto;
+    }
+
+    .right-logo-div {
+        display: none;
+    }
+
+    .form-container {
+        max-width: 100%;
+    }
+
+    .form-group {
+        width: auto;
+    }
+
+    .form-group input {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 335px) {
+    .title {
+        height: auto;
+    }
+}
+
+
+@media only screen and (max-width: 179px) {
+    .continue-button {
+        display: block;
+    }
+}
