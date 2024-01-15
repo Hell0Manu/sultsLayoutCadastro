@@ -9,7 +9,6 @@ form.addEventListener("submit", function(event) {
     }
 })
 
-/*  validate dados */
 let username = document.getElementById("name");
 let company = document.getElementById("company");
 let emaill = document.getElementById("email");
@@ -22,6 +21,7 @@ company.addEventListener("input", function() { warning.style.display = 'none'; }
 emaill.addEventListener("input", function() { warning.style.display = 'none'; });
 phonee.addEventListener("input", function() { warning.style.display = 'none'; });
 
+/*  Data validation */
 function checkInputDados() {
     let usernameValue = username.value;
     let companyValue = company.value;
@@ -50,7 +50,7 @@ function checkInputDados() {
     }
 }
 
-/* Email validate */
+/* Email validation */
 const email = document.getElementById("email");
 
 email.addEventListener("keyup", function() {
