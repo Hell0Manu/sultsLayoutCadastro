@@ -163,6 +163,7 @@ form {
     font-weight: 700;
     line-height: 1.5;
     letter-spacing: 1.15px;
+    transition: .3s;
 }
 
 .continue-button button:focus {
@@ -285,4 +286,3 @@ form {
         display: block;
     }
 }
-

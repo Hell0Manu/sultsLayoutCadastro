@@ -1,35 +1,32 @@
 const form = document.querySelector("form");
+
 form.addEventListener("submit", function(event) {
     event.preventDefault();
-    let dadosValidos = checkInputDados()
+    let dadosValidos = checkInputDados();
 
     if(dadosValidos) {
-        window.location.href = "continue-page.html"
+        window.location.href = "continue-page.html";
     }
 })
-
 
 /*  validate dados */
 let username = document.getElementById("name");
 let company = document.getElementById("company");
 let emaill = document.getElementById("email");
 let phonee = document.getElementById("phone");
-let warning = document.getElementById("form-warning-wrapper")
-let p = warning.querySelector("p")
-
+let warning = document.getElementById("form-warning-wrapper");
+let p = warning.querySelector("p");
 
 username.addEventListener("input", function() { warning.style.display = 'none'; });
 company.addEventListener("input", function() { warning.style.display = 'none'; });
 emaill.addEventListener("input", function() { warning.style.display = 'none'; });
 phonee.addEventListener("input", function() { warning.style.display = 'none'; });
 
-
 function checkInputDados() {
     let usernameValue = username.value;
     let companyValue = company.value;
     let emailValue = emaill.value;
     let phoneValue = phonee.value;
-
 
     if (usernameValue === "") {
         p.innerText = 'Informe o seu nome';
@@ -53,7 +50,6 @@ function checkInputDados() {
     }
 }
 
-
 /* Email validate */
 const email = document.getElementById("email");
 
@@ -70,7 +66,7 @@ function checkInputEmail() {
         errorInput(email, "Please enter a valid email address.");
         return false;
     } else {
-        formItem.className = "form-group"
+        formItem.className = "form-group";
         return true;
     }
 }
@@ -80,9 +76,8 @@ function errorInput(input, message) {
     const textMessage = formItem.querySelector("a")
 
     textMessage.innerText = message;
-    formItem.className = "form-group error"
+    formItem.className = "form-group error";
 }
-
 
 /* Phone mask */
 let phone = document.getElementById("phone");
@@ -101,4 +96,3 @@ phone.addEventListener("input", function () {
 
     phone.value = clearValue;
 });
-
