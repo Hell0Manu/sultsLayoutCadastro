@@ -1,29 +1,45 @@
-/* evento dentro do formulario */
+/* event inside the form */
 const form = document.querySelector("form");
 form.addEventListener("submit", (event) => {
     event.preventDefault();
-    checkInputName()
+    checkInputdados()
     checkInputEmail()
+    
+    
 })
 
-/* name validate */
-const username = document.getElementById("name");
-const warning = document.getElementById("form-warning-wrapper")
+/* name validate / / company validate */
+let username = document.getElementById("name");
+let company = document.getElementById("company");
+let emaill = document.getElementById("email");
+let phonee = document.getElementById("phone");
+let warning = document.getElementById("form-warning-wrapper")
+let p = warning.querySelector("p")
 
-function checkInputName(){
-    const usernameValue = username.value;
+
+function checkInputdados(){
+    let usernameValue = username.value;
+    let companyValue = company.value;
+    let emailValue = emaill.value;
+    let phoneValue = phonee.value;
+
 
     if(usernameValue === "") {
         warning.style.display = 'block';
-        errorInput(warning, "Please enter a valid email address.")
-    } else{
+        p.innerText = 'Informe o seu nome';
+    }else if(companyValue === ""){
+        warning.style.display = 'block';
+        p.innerText = 'Informe a sua empresa';
+    }else if(emailValue === "" || checkInputEmail(emailValue) == true){
+        warning.style.display = 'block';
+        p.innerText = 'Informe um email válido';
+    }else if(phoneValue === ""){
+        warning.style.display = 'block';
+        p.innerText = 'Informe o seu telefone';
+    }else{
         warning.style.display = 'none';
     }
 }
-
-const p = warning.querySelector("p")
-p.innerText = 'Sua nova mensagem aqui';
-
 
 
 /* Email validate */
@@ -36,12 +52,11 @@ email.addEventListener("keyup", () => {
 function checkInputEmail(){
     const emailValue = email.value;
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const formItem = email.parentElement;
 
-    if(!emailPattern.test(emailValue)) {
+    if(!emailPattern.test(emailValue) && emailValue != "") {
         errorInput(email, "Please enter a valid email address.")
-        formItem.className = "form-group error";
     } else{
-        const formItem = email.parentElement;
         formItem.className = "form-group"
     }
 }

@@ -61,6 +61,7 @@ form {
     border-radius: 0.25rem;
     outline: none;
     font-size: 1rem;
+    color: #495057;
 }
 
 .form-group label {
@@ -131,7 +132,7 @@ form {
 }
 
 .style-form-warnin {
-    width: 100%;
+    width: 94.5%;
     background: rgb(255, 154, 68); 
     color: white;
     padding: 10px; 
@@ -273,6 +274,11 @@ form {
     }
 }
 
+@media only screen and (max-width: 218px) {
+    main {
+        justify-content: initial;
+    }
+}
 
 @media only screen and (max-width: 179px) {
     .continue-button {
