@@ -40,14 +40,14 @@
 }
 
 .card-verificad {
-    max-width: 414px;
-    height: 400px;
+    width: 100%;
+    max-width: 814px;
+    height: 55%;
     background: #e7f0f6;
     overflow: hidden;
     border-radius: 20px;
  box-shadow: 0 0 2px 0 rgb(34 47 62/20%), 0 4px 8px 0 rgb(34 47 62/15%); 
     border: 1px solid #d5d5d5;
-    margin-left: 50px;
 }
 
 .verification-container {
@@ -58,7 +58,8 @@
 }
 
 .img-confirmation {
-    width: 35%;     
+    padding-left: 50px;
+    width: 25%;     
 }
 
 .text-conteiner {
@@ -99,6 +100,10 @@
 
 .button-sults button:focus {
     box-shadow: 0px 0px 0px 3px #B6D6F2;
+}
+
+@media only screen and (max-width: 768px) {
+    
 }
 
 @media only screen and (max-width: 768px) {

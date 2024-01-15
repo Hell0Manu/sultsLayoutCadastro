@@ -1,8 +1,11 @@
 const form = document.querySelector("form");
 form.addEventListener("submit", function(event) {
     event.preventDefault();
-    checkInputDados()
-    checkInputEmail()
+    let dadosValidos = checkInputDados()
+
+    if(dadosValidos) {
+        window.location.href = "continue-page.html"
+    }
 })
 
 
